@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+    <style>
+        .doc{
+            color: brown;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+  <h1 class="doc">
+    Operators
+  </h1>
+  <hr>
+    <h2>
+        Arithmetic oprators 
+    
+    </h2>
+    <script>
+        let a= 10;
+        let b=2;
+        let c=a+b;
+        let d = a-b;
+        let e=a*b;
+        let f = a/b;
+        let g = a%b;
+        let h= a++;
+        let i = a--;
+        document.write('addition operator'+ c+'<br>');
+        document.write("<br>");
+        document.write(d);
+        document.write("<br>");
+        document.write(e);
+        document.write("<br>");
+        document.write(f);
+        document.write("<br>");
+        document.write(g);
+        document.write("<br>");
+        document.write(h);
+        document.write("<br>");
+        document.write(i);
+        document.write("<br>");
+        document.write("<hr>");
+    </script>
+    <h2>
+        Comparision operators
+    </h2>
+    <script>
+        /*equal 
+        not equal
+        stricly equal
+        not stricly equal
+        greater tan
+        less than
+        greater than or equal to
+        less than or equal to
+        */
+       let j = "one";
+       let k="Two";
+       document.write(j==k );
+       document.write("<br>");
+       document.write(j!=k );
+       document.write("<br>");
+       document.write(j===k );
+       document.write("<br>");
+       document.write(j+k);
+       document.write("<br>");
+       document.write(j!==k );
+       document.write("<br>");
+       document.write(j>k );
+       document.write("<br>");
+       document.write(j<k );
+       document.write("<br>");
+       document.write(j>=k );
+       document.write("<br>");
+       document.write(j<=k );
+       document.write("<br>");
+       document.write("<hr>");
+
+
+    </script>
+    <h2>
+        Logical operators
+    </h2>
+    <script>
+         
+         let l=5;
+         let m=10;
+         document.write(l>2 || m>5);  /* || --> or */
+    </script>
+    <hr>
+    <h2>Assignment operators</h2>
+    <script>
+         document.write("<br>");
+     let l = 5;
+     let m=1;
+     m+=l;
+     
+     document. write(m);
+    </script>
+</body>
+</html>
