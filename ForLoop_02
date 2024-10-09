@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>For Loop</h2>
+
+<p id="Thiya"></p>
+
+<script>
+const fruits = ["Apple", "Orange", "Guava", "Papaya"];
+let i, len, text;
+for (i = 0, len = Fruits.length, text = ""; i < len; i++) {
+  text += fruits[i] + "<br>";
+}
+document.GetelementById("Thiya").innerHTML = text;
+</script>
+
+</body>
+</html>
