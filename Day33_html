@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-size: 200% 200%;
+            animation: gradient 5s ease infinite;
+        }
+
+       
+
+        .calculator {
+            background: rgba(156, 151, 151, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 250px;
+            height: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .calculator:hover {
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 20px);
+            border: 2px solid #6c757d;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #ff7e5f;
+            outline: none;
+        }
+
+        button {
+            background: linear-gradient(90deg, #ff6a00, #ee0979);
+            color: rgb(235, 225, 225);
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #ee0979, #ff6a00);
+            transform: scale(1.05);
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #450edf;
+        }
+    </style>
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operator = document.getElementById('operator').value;
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num2 !== 0 ? num1 / num2 : 'Error: Division by zero';
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+
+            document.getElementById('result').innerText = `Result: ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <input type="number" id="num1" placeholder="First number" required>
+        <input type="number" id="num2" placeholder="Second number" required>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button onclick="calculate()">Calculate</button>
+        <p id="result">Result: </p>
+    </div>
+</body>
+</html>
